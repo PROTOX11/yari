@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: auto;
+            width: 50%;
+            padding: 30px;
+            background: #e2e2e2;
+        }
+    </style>
+</head>
+<body>
+    <div class="">
+        <h1 data-th-text="${name}">hellow boy welcome to welcome page</h1>
+        <p>Youtube channel : <span data-th-text="${youtube_channel}"></span></p>
+        <!-- <p>Github Repository : <span data-th-text="${github}"></span></p> -->
+        <a th:href="${github}">click here to open github</a>
+        <p>Lorem ipsum, dolor sit amet consectetur veritatis nostrum.</p>
+    </div>
+</body>
+</html>
