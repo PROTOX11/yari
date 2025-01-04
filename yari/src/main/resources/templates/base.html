@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="parent(content,title,script,power)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <title data-th-replace="${title}">Base page</title>
+</head>
+<body>
+    <div data-th-replace="navbar :: navbar"></div>
+
+    <!-- content -->
+    <div class="p-4">
+        <section data-th-replace="${content}"></section>
+        <section data-th-replace="${power}"></section>
+    </div>
+    <div data-th-replace="footer :: footer"></div>
+    <script data-th-replace="${script}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</body>
+</html>
