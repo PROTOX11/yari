@@ -44,3 +44,4 @@ public class PageController {
         System.out.println("Signup page loading");
         return "contact";
 }
+}
