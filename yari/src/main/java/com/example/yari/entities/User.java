@@ -10,7 +10,7 @@ import lombok.Setter;
 import jakarta.persistence.Column;
 import jakarta.persistence.OneToMany;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.FetchType;
 @Entity
@@ -23,16 +23,20 @@ import jakarta.persistence.FetchType;
 public class User {
     @Id
     private String userId;
+    @Column(name = "user_name", nullable = false)
+    private String name;
     @Column(unique = true, nullable = false)
     private String email;
     private String password;
-    @Column(length = 100)
-    private String name;
-    @Column(length = 100)
+    @Column(length = 1000)
     private String about;
-    @Column(length = 100)
+    @Column(length = 1000)
     private String phoneNumber;
     private String profilePicture;
+
+    private boolean enabled = false;
+    private boolean emailVerified = false;
+    private boolean phoneVerified = false;
 
     private Providers provider = Providers.SELF;
     private String providerUserId;
